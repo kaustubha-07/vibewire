@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Kaustubh Vibewire
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4"> 
+    Welcome to Kaustubh's Django Project
+</h1>
+
+<a class="btn btn-primary mb-4" href="{% url 'vibewire_create' %}">Create a vibewire</a>
+<div class="container row gap-3">
+    {% for vibewire in vibewires %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{vibewire.photo.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{vibewire.user.username}}</h5>
+          <p class="card-text">{{vibewire.text}}</p>
+
+          {% if vibewire.user == user %}
+          <a href="{% url 'vibewire_edit' vibewire.id %}" class="btn btn-primary">Edit</a>
+          <a href="{% url 'vibewire_delete' vibewire.id %}" class="btn btn-danger">Delete</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Kaustubh Vibewire
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4"> 
+    Welcome to Kaustubh's Django Project
+</h1>
+
+<h2>
+    {% if form.instance.pk %}
+    Edit Vibewire
+    {% else %}
+    Create Vibewire
+    {% endif %}
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-warning" type="submit">Submit</button>
+    </form>
+    <a href="{% url 'vibewire_list' %}"> Back to vibewire list</a>
+</h2>
+
+{% endblock %}
