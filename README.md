@@ -75,11 +75,6 @@ Visit `http://127.0.0.1:8000/` in your browser.
 
 ---
 
-## 📸 Screenshots (Optional)
-_Add screenshots of your app's UI_
-
----
-
 ## 📜 License
 This project is **open-source** and available under the [MIT License](LICENSE).
 
@@ -88,7 +83,7 @@ This project is **open-source** and available under the [MIT License](LICENSE).
 ## 📩 Contact
 For queries or contributions, contact:
 - **GitHub**: [@kaustubha-07](https://github.com/kaustubha-07)
-- **Email**: your-email@example.com
+- **Email**: kskaustubha@gmail.com
 
 ---
 
